@@ -246,6 +246,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"case-anything@npm:^2.1.10":
+  version: 2.1.11
+  resolution: "case-anything@npm:2.1.11"
+  checksum: 5cc3492f4ff527654eb3334bf6d0205dc8da5e9ca4a989e9679ccb07146566ee1400be922c2695269bef581d7c735d95e204b1d013403379898387a7d84e907d
+  languageName: node
+  linkType: hard
+
 "chownr@npm:^2.0.0":
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
@@ -313,6 +320,24 @@ __metadata:
   version: 1.1.2
   resolution: "depd@npm:1.1.2"
   checksum: 6b406620d269619852885ce15965272b829df6f409724415e0002c8632ab6a8c0a08ec1f0bd2add05dc7bd7507606f7e2cc034fa24224ab829580040b835ecd9
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "detect-libc@npm:1.0.3"
+  bin:
+    detect-libc: ./bin/detect-libc.js
+  checksum: daaaed925ffa7889bd91d56e9624e6c8033911bb60f3a50a74a87500680652969dbaab9526d1e200a4c94acf80fc862a22131841145a0a8482d60a99c24f4a3e
+  languageName: node
+  linkType: hard
+
+"dprint-node@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "dprint-node@npm:1.0.7"
+  dependencies:
+    detect-libc: ^1.0.3
+  checksum: cd29f8e2b7de334273b4f53d24072718139635408b015963bcc80829cc785a84591462585b5b569791c8b1420c5672bec7499bda70d7298c58c8a3f43796e659
   languageName: node
   linkType: hard
 
@@ -779,13 +804,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15":
-  version: 4.17.21
-  resolution: "lodash@npm:4.17.21"
-  checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
-  languageName: node
-  linkType: hard
-
 "long@npm:^4.0.0":
   version: 4.0.0
   resolution: "long@npm:4.0.0"
@@ -1067,15 +1085,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "prettier@npm:2.5.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
-  languageName: node
-  linkType: hard
-
 "promise-inflight@npm:^1.0.1":
   version: 1.0.1
   resolution: "promise-inflight@npm:1.0.1"
@@ -1090,6 +1099,30 @@ __metadata:
     err-code: ^2.0.2
     retry: ^0.12.0
   checksum: f96a3f6d90b92b568a26f71e966cbbc0f63ab85ea6ff6c81284dc869b41510e6cdef99b6b65f9030f0db422bf7c96652a3fff9f2e8fb4a0f069d8f4430359429
+  languageName: node
+  linkType: hard
+
+"protobufjs@npm:^6.11.3":
+  version: 6.11.3
+  resolution: "protobufjs@npm:6.11.3"
+  dependencies:
+    "@protobufjs/aspromise": ^1.1.2
+    "@protobufjs/base64": ^1.1.2
+    "@protobufjs/codegen": ^2.0.4
+    "@protobufjs/eventemitter": ^1.1.0
+    "@protobufjs/fetch": ^1.1.0
+    "@protobufjs/float": ^1.0.2
+    "@protobufjs/inquire": ^1.1.0
+    "@protobufjs/path": ^1.1.2
+    "@protobufjs/pool": ^1.1.0
+    "@protobufjs/utf8": ^1.1.0
+    "@types/long": ^4.0.1
+    "@types/node": ">=13.7.0"
+    long: ^4.0.0
+  bin:
+    pbjs: bin/pbjs
+    pbts: bin/pbts
+  checksum: 4a6ce1964167e4c45c53fd8a312d7646415c777dd31b4ba346719947b88e61654912326101f927da387d6b6473ab52a7ea4f54d6f15d63b31130ce28e2e15070
   languageName: node
   linkType: hard
 
@@ -1319,39 +1352,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-poet@npm:^4.5.0":
-  version: 4.10.0
-  resolution: "ts-poet@npm:4.10.0"
+"ts-poet@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "ts-poet@npm:6.4.1"
   dependencies:
-    lodash: ^4.17.15
-    prettier: ^2.5.1
-  checksum: ffb3890a429f7ab59d96a7a17d9cc161bce786695af0fd77156e5779cfaeda92eaae4f15995a8c71a83cfb528d61bd2518bae19c4adec147bff8dce6f27c57d3
+    dprint-node: ^1.0.7
+  checksum: 2595caa15fe374b4dd5e1c09fd26b3d5e2fa24ef6153c25a41a4c01ed999682daed9e5753ead72862a099d197dc2bf8827b083632abc78754d9f0d55462f3e55
   languageName: node
   linkType: hard
 
-"ts-proto-descriptors@npm:^1.2.1":
-  version: 1.3.1
-  resolution: "ts-proto-descriptors@npm:1.3.1"
+"ts-proto-descriptors@npm:1.9.0":
+  version: 1.9.0
+  resolution: "ts-proto-descriptors@npm:1.9.0"
   dependencies:
     long: ^4.0.0
     protobufjs: ^6.8.8
-  checksum: ef8acf9231375dd00cfa667c688746ae24fb8012a3875d1447cb6a6e9e0311150681719072716f58a24b1df801bcc35e56faca11ea4bac1f8146038b524b93c4
+  checksum: 6818c03c7688db0ceb74d3b5108b127afa2994854113fbb599de4e7610d0c725601feb9ba0d8cd718a2f9d729172865d80d0b0797995b6515e03c5df69bf793c
   languageName: node
   linkType: hard
 
-"ts-proto@npm:^1.101.0":
-  version: 1.101.0
-  resolution: "ts-proto@npm:1.101.0"
+"ts-proto@npm:^1.146.0":
+  version: 1.147.2
+  resolution: "ts-proto@npm:1.147.2"
   dependencies:
     "@types/object-hash": ^1.3.0
+    case-anything: ^2.1.10
     dataloader: ^1.4.0
     object-hash: ^1.3.1
-    protobufjs: ^6.8.8
-    ts-poet: ^4.5.0
-    ts-proto-descriptors: ^1.2.1
+    protobufjs: ^6.11.3
+    ts-poet: ^6.4.1
+    ts-proto-descriptors: 1.9.0
   bin:
     protoc-gen-ts_proto: protoc-gen-ts_proto
-  checksum: d404e34cad4fc5fb19271f7f257ff177d0ebac22ceca3b287927566a3ecda2f350b8592851d27415f6ec645525eae4ab40291ce3a6a3e151bb004478a1fe634a
+  checksum: 94a5c54d5464b22055abf560e0065a71ea9ecf90457587e7072986eba0f6c5f76868e42d298005d22ae4ed999b108131e7f3021c6dc833764f6586b1e5b14b7d
   languageName: node
   linkType: hard
 
@@ -1367,7 +1400,7 @@ __metadata:
 
 "typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>":
   version: 4.5.4
-  resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=bda367"
+  resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -1444,7 +1477,7 @@ __metadata:
     libsodium: ^0.7.9
     libsodium-wrappers: ^0.7.9
     pcm-player: ^0.0.11
-    ts-proto: ^1.101.0
+    ts-proto: ^1.146.0
     typescript: ^4.4.4
     vite: ^2.7.2
     wasm-feature-detect: ^1.2.11
